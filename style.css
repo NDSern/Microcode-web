@@ -67,7 +67,7 @@ h2,h3{
 
 h2{ font-size: var(--fs--h2);}
 h3{font-size: var(--fs--h3);}
-
+/* btn*/
 
 
 
@@ -89,3 +89,4 @@ h3{font-size: var(--fs--h3);}
     font-size: var(--fs--icon);
     margin-left: .5em;
 }
+
