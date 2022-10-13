@@ -1,27 +1,26 @@
+:root {
+  --ff--primary: "Be Vietnam Pro", sans-serif;
 
-:root{
-    --ff--primary: 'Be Vietnam Pro', sans-serif;
+  --clr--dark: #0d0b11;
+  --clr--light: #f6ebff;
+  --clr--accent: #38373b;
+  --clr--light-accent: #00c89e;
 
-    --clr--dark: #0D0B11;
-    --clr--light:#F6EBFF;
-    --clr--accent: #38373B;
-    --clr--light-accent: #00C89E;
+  --fs--h1: 3rem;
+  --fs--h2: 2.25rem;
+  --fs--h3: 1.25rem;
+  --fs--body: 1rem;
+  --fs--icon: 1.75rem;
 
-    --fs--h1: 3rem;
-    --fs--h2: 2.25rem;
-    --fs--h3: 1.25rem;
-    --fs--body: 1rem;
-    --fs--icon: 1.75rem;
-
-    --fw--reg: 400;
-    --fw--bold: 700;
+  --fw--reg: 400;
+  --fw--bold: 700;
 }
 
 /* general style */
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -30,64 +29,93 @@ body {
   box-sizing: border-box;
 }
 
-body{
-    background: var(--clr--dark);
-    color: var(--clr--light);
-    font-family: var(--ff--primary);
-    font-size: var(--fs--body);
-    line-height: 1.6;
+body {
+  background: var(--clr--dark);
+  color: var(--clr--light);
+  font-family: var(--ff--primary);
+  font-size: var(--fs--body);
+  line-height: 1.6;
 }
 
-img{
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-    display: block;
-    max-width: 100%;
+img {
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  display: block;
+  max-width: 100%;
 }
 
 /* typography */
 
-.name{
-    align-self: center;
-    padding-left: .5em;
+.name {
+  align-self: center;
+  padding-left: 0.5em;
 }
 
-.strong{
-    font-weight: var(--fw--bold);
-    display: block;
+.strong {
+  font-weight: var(--fw--bold);
+  display: block;
 }
 
-h2,h3{
-    line-height: 1;
-    margin: 0;
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
 }
 
-h2{ font-size: var(--fs--h2);}
-h3{font-size: var(--fs--h3);}
+h2 {
+  font-size: var(--fs--h2);
+}
+h3 {
+  font-size: var(--fs--h3);
+}
 /* btn*/
-
-
-
 
 /* Nav Bar*/
 
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: var(--clr--accent);
-    padding: .5em 0;
-    margin: 0;
-    position: fixed;
-    z-index: 2;
-
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--clr--accent);
+  padding: 0.5em 0;
+  margin: 0;
+  z-index: 2;
 }
 
-.uil{
-    font-size: var(--fs--icon);
-    margin-left: .5em;
+.uil {
+  font-size: var(--fs--icon);
+  margin-left: 0.5em;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr--accent);
+  padding: 0.5em 0;
+  padding-bottom: 75px;
+}
+
+.hero > div {
+  margin: 50px;
+  text-align: center;
+  font-size: var(--fs--h2);
+}
+
+.hero > button {
+    font-size: var(--fs--h3);
+  margin: 50px;
+  border-radius: 30px;
+  background-color: var(--clr--light-accent);
+  text-align: center;
+  color: var(--clr--light);
+  padding: 15px;
+  box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+}
+
+.hero > button:hover {
+    box-shadow: none;
+}
