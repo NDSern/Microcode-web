@@ -83,6 +83,7 @@ h3 {
   padding: 0.5em 0;
   margin: 0;
   z-index: 2;
+  position: fixed;
 }
 
 .uil {
@@ -95,8 +96,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   background-color: var(--clr--accent);
-  padding: 0.5em 0;
-  padding-bottom: 75px;
+  padding: 75px 0;
+  z-index: 1;
 }
 
 .hero > div {
