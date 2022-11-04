@@ -47,15 +47,15 @@ export default function Footer() {
             <div ref={cardRef} className="footer-card">
                 <h1 className={`footer-logo hidden ${cardVisibile ? 'show' : ''}`}>Creators</h1>
                 <div className="footer-card-container" >                    
-                    <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
+                    <a href="https://omnilios.github.io/omnilios-portfolio/" className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
                         <img src="src\img\om.jpg" alt="" />
-                    </div>
-                    <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
+                    </a>
+                    <a className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
                         <img src="src\img\aboke.jpg" alt="" />
-                    </div>
-                    <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
+                    </a>
+                    <a className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
                         <img src="src\img\uku.jpg" alt="" />
-                    </div>
+                    </a>
                 </div>
                 <div ref={iconRef} className="footer-icon">
                     <FontAwesomeIcon className={`font-awsome hidden ${iconVisibile ? 'show' : ''}`} size="2x" icon={faFacebook}></FontAwesomeIcon>
