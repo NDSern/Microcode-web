@@ -9,6 +9,8 @@ export default function App(){
         <div>
             <Nav />
             <Hero />
+            <Main />
+            <Footer />
         </div>
     )
 }

@@ -1,5 +1,7 @@
 :root {
   --ff--primary: "Be Vietnam Pro", sans-serif;
+  --ff--secondary: 'Rubik', sans-serif;
+  --ff--third: 'Lora', serif;
 
   --clr--dark: #0d0b11;
   --clr--light: #f6ebff;
@@ -18,7 +20,7 @@
 
 /* general style */
 
-body {
+html,body {
   margin: 0;
   padding: 0;
 }
@@ -83,7 +85,6 @@ h3 {
   padding: 0.5em 0;
   margin: 0;
   z-index: 2;
-  position: fixed;
 }
 
 .uil {
@@ -120,3 +121,54 @@ h3 {
 .hero > button:hover {
     box-shadow: none;
 }
+
+
+/*main*/
+
+main{
+    height: 400px;
+    background-color: var(--clr--dark);
+}
+
+/*/////////////////////////////////////////*/
+/*footer*/
+
+.align-right{
+    text-align: end;
+}
+
+
+footer{
+    background-color: var(--clr--accent);
+    font-family: var(--ff--secondary);
+}
+
+.footer-text-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: white 1px solid;
+    text-align: top;
+    margin: 0 5em;
+    color: var(--clr--light);
+}
+
+.footer-bold{
+    font-weight: var(--fw--bold);
+    color: var(--clr--light-accent);
+
+}
+
+.footer-logo{
+    font-family: var(--ff--third);
+    font-weight: var(--fw--bold);
+    margin-top: 0.25em;
+    margin-bottom: 0;
+}
+
+.footer-slogan{
+    margin-top: 0;
+}
+/* end footer */
+/*/////////////////////////////////////////*/
+
+
