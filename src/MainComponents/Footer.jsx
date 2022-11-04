@@ -6,9 +6,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+
 export default function Footer() {
     const { ref: cardRef, inView: cardVisibile, entry } = useInView();
     const { ref: textRef, inView: textVisibile, entry2 } = useInView();
+    const { ref: iconRef, inView: iconVisibile, entry3 } = useInView();
 
     return (
         <footer>
@@ -43,7 +45,7 @@ export default function Footer() {
                 </div>
             </div>
             <div ref={cardRef} className="footer-card">
-                <h1 className={`hidden ${cardVisibile ? 'show' : ''}`}>Creators</h1>
+                <h1 className={`footer-logo hidden ${cardVisibile ? 'show' : ''}`}>Creators</h1>
                 <div className="footer-card-container" >                    
                     <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
                         <img src="src\img\om.jpg" alt="" />
@@ -55,12 +57,12 @@ export default function Footer() {
                         <img src="src\img\uku.jpg" alt="" />
                     </div>
                 </div>
-                <div className="footer-icon">
-                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faFacebook}></FontAwesomeIcon>
-                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faTwitter}></FontAwesomeIcon>
-                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faGithub}></FontAwesomeIcon>
-                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faDiscord}></FontAwesomeIcon>
-                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faLinkedin}></FontAwesomeIcon>
+                <div ref={iconRef} className="footer-icon">
+                    <FontAwesomeIcon className={`font-awsome hidden ${iconVisibile ? 'show' : ''}`} size="2x" icon={faFacebook}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${iconVisibile ? 'show' : ''}`} size="2x" icon={faTwitter}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${iconVisibile ? 'show' : ''}`} size="2x" icon={faGithub}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${iconVisibile ? 'show' : ''}`} size="2x" icon={faDiscord}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${iconVisibile ? 'show' : ''}`} size="2x" icon={faLinkedin}></FontAwesomeIcon>
                 </div>
             </div>
         </footer>

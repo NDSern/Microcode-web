@@ -73,6 +73,8 @@ h2 {
 h3 {
   font-size: var(--fs--h3);
 }
+
+
 /* btn*/
 
 /* Nav Bar*/
@@ -150,13 +152,16 @@ footer{
     border-bottom: white 1px solid;
     text-align: top;
     margin: 0 5em;
+    margin-bottom: 1em;
     padding-bottom: 1em;
+
     color: var(--clr--light);
 }
 
 .footer-bold{
     font-weight: var(--fw--bold);
     color: var(--clr--light-accent);
+    letter-spacing: 1px;
 
 }
 
@@ -165,7 +170,9 @@ footer{
     font-weight: var(--fw--bold);
     margin-top: 0.25em;
     margin-bottom: 0;
+    letter-spacing: 1.5px;
 }
+
 
 .footer-slogan{
     margin-top: 0;
@@ -182,6 +189,7 @@ footer{
     display: flex;
     width: 50%;
     justify-content: space-between;
+    margin-top: 1em;
 }
 
 .logo > img {
