@@ -1,8 +1,19 @@
+import { useInView } from "react-intersection-observer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 export default function Footer() {
+    const { ref: cardRef, inView: cardVisibile, entry } = useInView();
+    const { ref: textRef, inView: textVisibile, entry2 } = useInView();
+
     return (
         <footer>
-            <div className="footer-text">
-                <div className="footer-text-container">
+            <div ref={textRef} className="footer-text">
+                <div className={`footer-text-container text-hidden ${textVisibile ? 'text-show' : ''}`}>
                     <div > 
                         <h1 className="footer-logo">LOGO</h1>
                         <p className="footer-slogan">Random Slogan</p>
@@ -31,7 +42,27 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div></div>
+            <div ref={cardRef} className="footer-card">
+                <h1>Creators</h1>
+                <div className="footer-card-container" >                    
+                    <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
+                        <img src="src\img\om.jpg" alt="" />
+                    </div>
+                    <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
+                        <img src="src\img\aboke.jpg" alt="" />
+                    </div>
+                    <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
+                        <img src="src\img\uku.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="footer-icon">
+                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faFacebook}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faTwitter}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faGithub}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faDiscord}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faLinkedin}></FontAwesomeIcon>
+                </div>
+            </div>
         </footer>
     )
 }
