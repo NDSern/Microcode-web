@@ -150,6 +150,7 @@ footer{
     border-bottom: white 1px solid;
     text-align: top;
     margin: 0 5em;
+    padding-bottom: 1em;
     color: var(--clr--light);
 }
 
@@ -205,9 +206,28 @@ footer{
 .logo:nth-child(2){transition-delay: 200ms;}
 .logo:nth-child(3){transition-delay: 400ms;}
 
-.font-awsome{
-    margin-left: .25em;
+
+.logo{
+    cursor: pointer;
 }
+
+.logo:hover{
+    opacity: .7;
+}
+
+.font-awsome{
+    margin-left: .40em;
+}
+
+.font-awsome:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.font-awsome:nth-child(2){transition-delay: 200ms;}
+.font-awsome:nth-child(3){transition-delay: 400ms;}
+.font-awsome:nth-child(4){transition-delay: 600ms;}
+.font-awsome:nth-child(5){transition-delay: 800ms;}
 
 .text-hidden{
     opacity: 0;

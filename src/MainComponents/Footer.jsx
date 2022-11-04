@@ -43,7 +43,7 @@ export default function Footer() {
                 </div>
             </div>
             <div ref={cardRef} className="footer-card">
-                <h1>Creators</h1>
+                <h1 className={`hidden ${cardVisibile ? 'show' : ''}`}>Creators</h1>
                 <div className="footer-card-container" >                    
                     <div className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
                         <img src="src\img\om.jpg" alt="" />
@@ -56,11 +56,11 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="footer-icon">
-                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faFacebook}></FontAwesomeIcon>
-                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faTwitter}></FontAwesomeIcon>
-                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faGithub}></FontAwesomeIcon>
-                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faDiscord}></FontAwesomeIcon>
-                    <FontAwesomeIcon className="font-awsome" size="2x" icon={faLinkedin}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faFacebook}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faTwitter}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faGithub}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faDiscord}></FontAwesomeIcon>
+                    <FontAwesomeIcon className={`font-awsome hidden ${cardVisibile ? 'show' : ''}`} size="2x" icon={faLinkedin}></FontAwesomeIcon>
                 </div>
             </div>
         </footer>
