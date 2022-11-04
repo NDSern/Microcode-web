@@ -17,7 +17,7 @@ export default function Footer() {
             <div ref={textRef} className="footer-text">
                 <div className={`footer-text-container text-hidden ${textVisibile ? 'text-show' : ''}`}>
                     <div > 
-                        <h1 className="footer-logo">LOGO</h1>
+                        <h2 className="footer-logo">LOGO</h2>
                         <p className="footer-slogan">Random Slogan</p>
                     </div>
                     <div >
@@ -45,7 +45,7 @@ export default function Footer() {
                 </div>
             </div>
             <div ref={cardRef} className="footer-card">
-                <h1 className={`footer-logo hidden ${cardVisibile ? 'show' : ''}`}>Creators</h1>
+                <h2 className={`footer-logo hidden ${cardVisibile ? 'show' : ''}`}>Creators</h2>
                 <div className="footer-card-container" >                    
                     <a href="https://omnilios.github.io/omnilios-portfolio/" className={`logo hidden ${cardVisibile ? 'show' : ''}`}>
                         <img src="src\img\om.jpg" alt="" />
