@@ -7,20 +7,23 @@ const Main = () => {
 
   const handleMouseMove = (event) => {
     setMousePos({
-      x: event.clientX - event.target.offsetLeft,
-      y: event.clientY - 500
+      x: event.pageX - event.target.offsetLeft,
+      y: event.pageY - event.target.offsetTop
+      // no idea why its 500 but it work
     });
-    console.log(mousePos);    
+    
     r.style.setProperty("--mouse-x", `${mousePos.x}px`);
     r.style.setProperty("--mouse-y", `${mousePos.y}px`);
+    console.log(event.target.offsetTop, " / ")
+    console.log(mousePos)
   };
 
   let form = (
     <main>
       <div className="tabs">
-        <div className="tab" onMouseMove={handleMouseMove}></div>
-        <div className="tab" onMouseMove={handleMouseMove}></div>
-        <div className="tab" onMouseMove={handleMouseMove}></div>
+        <div id="tab1" className="tab" onMouseMove={handleMouseMove}></div>
+        <div id="tab2" className="tab" onMouseMove={handleMouseMove}></div>
+        <div id="tab3" className="tab" onMouseMove={handleMouseMove}></div>
       </div>
     </main>
   );
@@ -29,8 +32,3 @@ const Main = () => {
 };
 
 export default Main;
-
-// style={{
-//   "--mouse-x": `${mousePos.x}px`,
-//   "--mouse-y": `${mousePos.y}px`,
-// }}
