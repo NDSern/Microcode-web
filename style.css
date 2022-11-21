@@ -7,7 +7,7 @@
   --clr--light: #f6ebff;
   --clr--accent: #38373b;
   --clr--light-accent: #00c89e;
-  --clr--dark--accent:#111418fa;
+  --clr--dark--accent: #111418fa;
 
   --fs--h1: 4rem;
   --fs--h2: 2.25rem;
@@ -192,8 +192,6 @@ h1 {
 /*/////////////////////////////////////////*/
 /*main*/
 
-
-
 /* end main */
 /*/////////////////////////////////////////*/
 
@@ -337,31 +335,35 @@ main {
   padding-bottom: 3em;
 }
 
-.main-text{
+.main-text {
   display: flex;
   flex-direction: column;
-  align-items: center ;
+  align-items: center;
   padding: 1em 16em;
 }
 
 .tabs {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
-  gap: .3em;
+  gap: 0.3em;
   order: 5;
   width: 90%;
 }
 
 .tab {
-  background-color: var(--clr--dark--accent);
+  background-color: rgba(255, 255, 255, 0.15);
   /* Doesn't work somehow*/
   /*border: 1px solid rgba(var(--clr--accent),0.1);*/
-  border: 1px solid rgba(255,255,255,0.1);
+  /*border: 1px solid rgba(255, 255, 255, 0.1);*/
   border-radius: 10px;
-  aspect-ratio: 1/.8;
+  aspect-ratio: 1/0.8;
   cursor: pointer;
   position: relative;
+}
+
+.tab:hover::before {
+  opacity: 1;
 }
 
 .tab::before {
@@ -377,7 +379,19 @@ main {
   position: absolute;
   top: 0px;
   width: 100%;
+  opacity: 0;
   z-index: 2;
+}
+
+.tab > .tab-content {
+  background-color: var(--clr--dark--accent);
+  border-radius: inherit;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* END OF MAIN*/
