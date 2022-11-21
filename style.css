@@ -7,6 +7,7 @@
   --clr--light: #f6ebff;
   --clr--accent: #38373b;
   --clr--light-accent: #00c89e;
+  --clr--dark--accent:#111418fa;
 
   --fs--h1: 4rem;
   --fs--h2: 2.25rem;
@@ -191,10 +192,7 @@ h1 {
 /*/////////////////////////////////////////*/
 /*main*/
 
-main {
-  height: 400px;
-  background-color: var(--clr--dark);
-}
+
 
 /* end main */
 /*/////////////////////////////////////////*/
@@ -328,31 +326,40 @@ footer {
 
 main {
   align-items: center;
-  background-color: var(--clr--accent);
+  background-color: var(--clr--dark);
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
+  margin: 4em 2em;
+  padding-bottom: 3em;
+}
+
+.main-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  padding: 1em 16em;
 }
 
 .tabs {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: .3em;
   order: 5;
-  max-width: 916;
-  width: calc(100%-20px);
+  width: 90%;
 }
 
 .tab {
-  background-color: var(--clr--accent);
+  background-color: var(--clr--dark--accent);
   /* Doesn't work somehow*/
   /*border: 1px solid rgba(var(--clr--accent),0.1);*/
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 10px;
-  height: 260px;
-  width: 300px;
+  aspect-ratio: 1/.8;
   cursor: pointer;
   position: relative;
 }
